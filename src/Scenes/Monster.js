@@ -99,7 +99,15 @@ class Monster extends Phaser.Scene {
     update() {
         let my = this.my;    // create an alias to this.my for readability
 
-       
+        this.input.keyboard.on('keydown-S', () => {
+            my.sprite.sMouth.visible = true;
+            my.sprite.fMouth.visible = false;
+        });
+        
+        this.input.keyboard.on('keydown-F', () => {
+            my.sprite.sMouth.visible = false;
+            my.sprite.fMouth.visible = true;
+        });
     }
 
 }
