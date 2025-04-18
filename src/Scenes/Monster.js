@@ -94,6 +94,8 @@ class Monster extends Phaser.Scene {
         my.sprite.fMouth = this.add.sprite(this.mouthX, this.mouthY, "monsterParts", "mouthJ.png");
 
         my.sprite.fMouth.visible = false; 
+
+        
     }
 
     update() {
@@ -108,6 +110,8 @@ class Monster extends Phaser.Scene {
             my.sprite.sMouth.visible = false;
             my.sprite.fMouth.visible = true;
         });
+
+        
     }
 
 }
