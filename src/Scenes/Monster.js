@@ -95,6 +95,11 @@ class Monster extends Phaser.Scene {
 
         my.sprite.fMouth.visible = false; 
 
+        this.keys = this.input.keyboard.addKeys({
+            left: 'A',
+            right: 'D'
+        });
+
         
     }
 
@@ -111,6 +116,15 @@ class Monster extends Phaser.Scene {
             my.sprite.fMouth.visible = true;
         });
 
+        if (this.keys.left.isDown) {
+            for (let part in my.sprite) {
+                my.sprite[part].x -= 5;
+            }
+        } else if (this.keys.right.isDown) {
+            for (let part in my.sprite) {
+                my.sprite[part].x += 5;
+            }
+        }
         
     }
 
